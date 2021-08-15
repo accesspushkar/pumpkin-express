@@ -12,6 +12,8 @@ CREATE TABLE 'users' (
 	'password' varchar(25) NOT NULL,
 	'type' varchar(10) NOT NULL DEFAULT 'normal'
 );
+
+
 CREATE TABLE `images` (
   `id` varchar(50) PRIMARY KEY,
   `name` varchar(255) DEFAULT NULL,
