@@ -1,7 +1,7 @@
 # pumpkin-express
 
 1) To run the server
-node server.js 
+   node server.js 
 
 2) SQL SCHEMAS
 
