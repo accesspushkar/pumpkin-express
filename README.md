@@ -21,3 +21,5 @@ CREATE TABLE `images` (
   FOREIGN KEY (`author`) REFERENCES users(`id`)
 );
 
+Sample data
+![Screenshot from 2021-08-15 22-51-52](https://user-images.githubusercontent.com/48689666/129486888-de7ad867-2397-45c9-802f-ef8ce75c64db.png)
