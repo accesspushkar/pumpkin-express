@@ -12,6 +12,8 @@ const imageRoutes = require("./routes/image");
 app.use("/user", userRoutes);
 app.use("/image", imageRoutes);
 
+app.use("/pumpkin-uploads", express.static("pumpkin-uploads"));
+
 app.listen(3002, () => {
   console.log("Server is running on port 3002.");
 }); 
