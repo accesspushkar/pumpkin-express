@@ -29,7 +29,7 @@ module.exports = {
     });
   },
   findAll: function(result) {
-    sql.query(`SELECT images.id, images.name, users.username, images.path, images.category, images.downloads  FROM images INNER JOIN users ON users.id = images.author`, (err, res) => {
+    sql.query(`SELECT images.id, images.name, users.username, images.path, images.category, images.downloads, images.batch  FROM images INNER JOIN users ON users.id = images.author`, (err, res) => {
       if (err) {
         console.log("error: ", err);
         result(err, null);
