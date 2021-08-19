@@ -16,6 +16,7 @@ module.exports = {
                path: req.file.filename,
                category: req.body.category,
                author: req.body.author,
+               batch: req.body.batch,
             }
             Image.saveImage(image, function(result, code){
                console.log(result)

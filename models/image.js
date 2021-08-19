@@ -1,14 +1,14 @@
 const sql = require("../db");
 module.exports = { 
   saveImage: function(image,callback) {
-    sql.query(`SELECT * FROM images WHERE name = '${image.name}'`, (err, res) => {
+    sql.query(`SELECT * FROM images WHERE path = '${image.path}'`, (err, res) => {
       let msg = "";
       let code = 400;
       if(err) throw err
         if(res.length > 1){
-            msg = image.name + " already exist";
+            msg = image.path + " already exist";
         }else{
-            sql.query(`INSERT INTO images VALUES (UUID(), '${image.name}', '${image.path}', '${image.category}', 0, '${image.author}')`, (err, res) => {
+            sql.query(`INSERT INTO images VALUES (UUID(), '${image.name}', '${image.path}', '${image.category}', 0, '${image.author}', '${image.batch}')`, (err, res) => {
                 if (err) throw err;
             });
             msg = image.name+ "is uploaded successfully";
